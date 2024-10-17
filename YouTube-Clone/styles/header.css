@@ -1,0 +1,279 @@
+.header{
+    height: 55px;
+    z-index: 100;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    background-color: white;
+}
+.left-section{
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+.menu{
+    height: 25px;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.yt-logo{
+    height:20px;
+    cursor: pointer;
+}
+.middle-section{
+    flex: 1;
+    margin-left: 164px;
+    margin-right: 35px;
+    display:flex;
+    align-items: center;
+}
+.search-bar{
+    flex:1;
+    height:37px;
+    border-color: rgb(192, 192, 192);
+    border-width: 1px;
+    border-style: solid;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius:25px;
+    font-size: 15px;
+    padding-left: 16px;
+    margin-right: 0;
+    width: 0;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.048);
+}
+.search-bar::placeholder{
+    font-family: Roboto,Arial;
+    font-size: 16px;
+}
+input{
+    border:1px solid;
+}
+input:focus{
+    border: .5px rgb(90, 90, 242);
+    border-style: solid;
+    outline:.5px rgba(90, 90, 242, 0.733);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.151);
+}
+.search{
+    width:64px;
+    height:37px;
+    background-color: rgb(248, 246, 246);
+    border-width: 1px;
+    border-color: rgb(192, 192, 192);
+    border-style:solid;
+    border-left-width: 0;
+    margin-left: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius:25px ;
+}
+.search,
+.voice{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+.search:hover,
+.voice:hover{
+    background-color: rgb(223, 222, 222);
+}
+.search:active,
+.voice:active{
+    background-color: rgb(183, 183, 183);
+}
+.search .tooltip{
+    font-family:Roboto,Arial;
+    position: absolute;
+    background-color: rgba(20, 20, 20, 0.685);
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    bottom:-50px;
+    right:10px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.voice .tooltip{
+    font-family:Roboto,Arial;
+    position: absolute;
+    background-color: rgba(20, 20, 20, 0.685);
+    color: white;
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    bottom:-50px;
+    right:-44px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.upload .tooltip{
+    font-family:Roboto,Arial;
+    position: absolute;
+    background-color: rgba(20, 20, 20, 0.685);
+    color: white;
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    bottom:-30px;
+    right:165px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.apps .tooltip{
+    font-family:Roboto,Arial;
+    position: absolute;
+    background-color: rgba(20, 20, 20, 0.685);
+    color: white;
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    bottom:-30px;
+    right:95px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.noti-container .tooltip{
+    font-family:Roboto,Arial;
+    position: absolute;
+    background-color: rgba(20, 20, 20, 0.685);
+    color: white;
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    bottom:-45px;
+    right:-25px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.search:hover .tooltip,
+.voice:hover .tooltip,
+.upload:hover .tooltip,
+.apps:hover .tooltip,
+.noti-container:hover .tooltip{
+    opacity: 1;
+}
+.search-icon{
+    height:27px;
+}
+.voice{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 15px;
+    margin-right: 48px;
+    background-color: rgba(207, 205, 205, 0.244);
+}
+.voice-icon{
+    height: 24px;
+}
+.right-section{
+    width:180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+.upload-icon,
+.apps-icon,
+.noti-icon{
+    height:24px;
+    padding: 8px;
+    cursor: pointer;
+}
+.noti-container{
+    position: relative;
+}
+.upload-icon:hover,
+.apps-icon:hover,
+.noti-icon:hover{
+    background-color: rgb(223, 222, 222);
+    width:24px;
+    height:24px;
+    border-radius: 50px;
+    border: none;
+}
+.noti-count{
+    position: absolute;
+    top:8px;
+    right:4px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-family: Roboto,Arial;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+.current-pic{
+    height:32px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.chips-wrapper{
+    overflow-x:scroll ;
+    color: black;
+    font-family: Roboto,Arial;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: white;
+    display: flex;
+    padding-bottom: 1px;
+    margin-left: -6px;
+    margin-top: -4px;
+    position: fixed;
+    z-index: 99;
+}
+.chips-wrapper::-webkit-scrollbar{
+    height:0;
+}
+.chip1{
+    color:white;
+    margin: 12px 6px;
+    background-color: rgb(11, 11, 11);
+    padding: 7px 11px;
+    border: 1px solid rgb(255, 255, 255,0.1);
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.chip{
+    margin: 12px 6px;
+    background-color: rgba(218, 216, 216, 0.253);
+    padding: 7px 12px;
+    border: 1px solid rgb(255, 255, 255,0.1);
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+.chip:hover{
+    background-color: rgba(218, 216, 216, 0.653);
+}
